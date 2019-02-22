@@ -1,0 +1,21 @@
+.destacado{
+    color: red;
+}
+.caja{
+    width: 200px;
+    height: 200px;
+    color: red;
+    background: gold;
+}
+#caja{
+    width: 200px;
+    height: 200px;
+    color: red;
+    background: gold;
+
+}
+body
+{margin: 0.25in;
+    background: red
+}
+div 

@@ -1,0 +1,12 @@
+body{
+    margin: 0.5in
+}
+h1{
+    line-height: 2cm
+}
+p{
+    word-spacing: 4mm;
+}
+a{font-size: 20pt;}
+
+span{ font-size: 1pc;}

@@ -1,0 +1,15 @@
+body {
+    color: green;
+    background: gold;
+
+}
+#parrafo1 {
+    color: blue; 
+    background: red;
+}
+
+#parrafo2 span{
+    color: black;
+    background: white;
+    
+}
