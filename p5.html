@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script language="javascript">
+        function agregar(){
+            if (document.frm.txtEtiqueta.value.length==0){
+                alert("debes escribir algo");
+                        } else{
+                        var nuevoItem = document.frm.txtEtiqueta.value;
+                        var combo = document.getElementById("selColores");
+                        var option =document.createElement("option");
+                        combo.options.add(option,0);
+                        combo.options[0].value=nuevoItem;
+                        combo.options[0].innerText=nuevoItem;
+                        document.frm.txtEtiqueta.value =""; 
+
+                    } 
+                              }
+  function eliminar(){
+      var combo= document.getElementById("selColores");
+      combo.remove(document.getElementById("selColores").selectedIndex);
+  }               
+  function modificar(){
+      if(document.frm.txtEtiqueta.value.length ==0){
+          alert("debes escribir algo");
+      } else{
+          eliminar();
+          agregar();
+      }
+  }            
+                              </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+ <form name="frm" method="POST" action="recibe.php">
+     <table>
+         <tr>
+             <td>TAREA</td>
+             <td colspan="2">
+                 <select name="cmbColor" id="selColores">
+                     <option>ejemplotarea1</option>
+                     
+                 </select>
+             </td>
+         </tr>
+         <tr>
+                <td>ESCRIBE TU TAREA:</td>
+                <td> <input type="text" name="txtEtiqueta" ></td>
+                <td>&nbsp</td>
+         </tr>
+         <tr>
+           <td><input type="button" onclick="agregar();" value="agregar tarea"/></td>
+           <td><input type="button" onclick="eliminar();" value="eliminar  tarea seleccionada"/></td>
+           <td><input type="button" onclick="modificar();"value="editar tarea seleccionada por caja de texto"/></td>  
+         </tr>
+     </table>
+ </form>   
+</body>
+</html>
